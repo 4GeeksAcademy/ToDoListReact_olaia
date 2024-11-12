@@ -1,25 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import Card from "./Card"
+
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
+	const [inputValue, setInputValue] = useState("")
+	const [toDoList, setToDoList] = useState([])
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<>
+		<div className="container">
+<input type="text" placeholder="Agrega una tarea" value={inputValue} onChange={(e) => {console.log("nuevo valor:", e.target.value)
+	 setInputValue(e.target.value)}} ></input>
+	
+	onkeydown 
+
 		</div>
+		</>
 	);
 };
 
